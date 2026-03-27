@@ -1,54 +1,110 @@
-🤖 Bot de Pagos Automatizado con Telegram
+<p align="center">
+  <img src="https://img.shields.io/badge/Telegram-Bot%20de%20Pagos%20Automatizado-2AABEE?style=for-the-badge&logo=telegram&logoColor=white" alt="Bot de Pagos Telegram" />
+</p>
 
-Bot avanzado desarrollado en Node.js que automatiza el proceso de ventas, validación de pagos mediante imágenes y control de acceso a contenido privado en Telegram.
+<h1 align="center">🤖 Bot de Pagos Automatizado con Telegram</h1>
 
-✨ Funcionalidades
-🛒 Flujo automatizado de ventas
-Interacción con clientes mediante chatbot (tipo asistente)
-Respuesta automática a consultas
-💳 Validación de pagos con IA (imagen)
-El cliente envía captura de pago (Yape, transferencia, etc.)
-El bot analiza la imagen (monto, datos)
-🔔 Sistema de aprobación manual (Admin)
-Se envía la evidencia a un bot administrador
-Incluye botones:
-✅ Aprobar
-❌ Rechazar
-📩 Notificación en tiempo real
-El admin recibe alerta inmediata con imagen y datos del pago
-🔐 Control de acceso automático
-Si se aprueba el pago:
-Se otorga acceso a un canal/grupo privado
-Si se rechaza:
-Se notifica al cliente
-🧠 Arquitectura del sistema
+<p align="center">
+  Bot avanzado desarrollado en <strong>Node.js</strong> para automatizar ventas, validar pagos mediante imágenes y gestionar el acceso a contenido privado en Telegram.
+</p>
 
-El sistema utiliza dos bots:
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-Backend-green?style=flat-square&logo=node.js" />
+  <img src="https://img.shields.io/badge/Telegram-Bot-blue?style=flat-square&logo=telegram" />
+  <img src="https://img.shields.io/badge/IA-An%C3%A1lisis%20de%20im%C3%A1genes-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/Estado-Activo-success?style=flat-square" />
+</p>
 
-Bot Cliente
-Interacción con usuarios
-Recepción de pagos (imágenes)
-Bot Administrador
-Recibe validaciones
-Permite aprobar o rechazar pagos
-🛠️ Tecnologías
-Node.js
-Telegram Bot API
-Librerías:
-node-telegram-bot-api
-@google/generative-ai (para análisis de imágenes)
-Manejo de sesiones y eventos en tiempo real
-🔐 Conexión
+---
 
-El bot se conecta mediante:
+## 📌 Descripción
 
-API ID
-API HASH
-Token de Telegram
+Este proyecto es un **bot de pagos automatizado en Telegram** que permite gestionar el proceso de venta de forma más rápida y organizada.
 
-(Configurados mediante variables de entorno)
+El sistema recibe comprobantes de pago enviados por los clientes, analiza la imagen con IA, notifica al administrador en tiempo real y permite aprobar o rechazar el acceso a contenido privado dentro de Telegram.
 
-🚀 Instalación
+---
+
+## ✨ Funcionalidades
+
+### 🛒 Flujo automatizado de ventas
+- Interacción automática con clientes mediante chatbot
+- Respuesta a consultas frecuentes
+- Guía al usuario durante el proceso de compra
+
+### 💳 Validación de pagos con IA
+- El cliente envía una captura de pago
+- El sistema analiza la imagen automáticamente
+- Extracción de información relevante como monto o datos visibles
+
+### 🔔 Sistema de aprobación manual para admin
+- El comprobante se envía a un bot o panel de administración
+- El administrador recibe la evidencia en tiempo real
+- Incluye botones interactivos:
+  - ✅ Aprobar
+  - ❌ Rechazar
+
+### 📩 Notificaciones en tiempo real
+- Aviso inmediato al administrador cuando llega un nuevo pago
+- Seguimiento rápido del estado de cada validación
+
+### 🔐 Control de acceso automático
+- Si el pago es aprobado, el usuario obtiene acceso al canal o grupo privado
+- Si el pago es rechazado, el usuario recibe una notificación automática
+
+---
+
+## 🧠 Arquitectura del sistema
+
+El sistema trabaja con **dos bots principales**:
+
+### 👤 Bot Cliente
+Encargado de la interacción con los usuarios:
+- Atención automática
+- Flujo de compra
+- Recepción de imágenes de pago
+
+### 🛡️ Bot Administrador
+Encargado de la validación:
+- Recibe los comprobantes
+- Permite aprobar o rechazar pagos
+- Controla el acceso al contenido privado
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **Node.js**
+- **Telegram Bot API**
+- **Google Generative AI** para análisis de imágenes
+
+### Librerías principales
+- `node-telegram-bot-api`
+- `@google/generative-ai`
+
+### Otras capacidades
+- Manejo de sesiones
+- Eventos en tiempo real
+- Automatización de respuestas
+- Validación de evidencias de pago
+
+---
+
+## 🔐 Conexión y credenciales
+
+El bot se conecta utilizando las siguientes variables de entorno:
+
+- **TELEGRAM_TOKEN**
+- **API_ID**
+- **API_HASH**
+
+Estas credenciales deben configurarse en un archivo `.env`.
+
+---
+
+## 🚀 Instalación
+
+```bash
 # Clonar repositorio
 git clone https://github.com/michaelGuerraQ/bot-pagos-telegram.git
 
@@ -57,88 +113,3 @@ cd bot-pagos-telegram
 
 # Instalar dependencias
 npm install
-⚙️ Configuración
-
-🤖 Bot de Pagos Automatizado con Telegram
-
-Bot avanzado desarrollado en Node.js que automatiza el proceso de ventas, validación de pagos mediante imágenes y control de acceso a contenido privado en Telegram.
-
-✨ Funcionalidades
-🛒 Flujo automatizado de ventas
-Interacción con clientes mediante chatbot (tipo asistente)
-Respuesta automática a consultas
-💳 Validación de pagos con IA (imagen)
-El cliente envía captura de pago (Yape, transferencia, etc.)
-El bot analiza la imagen (monto, datos)
-🔔 Sistema de aprobación manual (Admin)
-Se envía la evidencia a un bot administrador
-Incluye botones:
-✅ Aprobar
-❌ Rechazar
-📩 Notificación en tiempo real
-El admin recibe alerta inmediata con imagen y datos del pago
-🔐 Control de acceso automático
-Si se aprueba el pago:
-Se otorga acceso a un canal/grupo privado
-Si se rechaza:
-Se notifica al cliente
-🧠 Arquitectura del sistema
-
-El sistema utiliza dos bots:
-
-Bot Cliente
-Interacción con usuarios
-Recepción de pagos (imágenes)
-Bot Administrador
-Recibe validaciones
-Permite aprobar o rechazar pagos
-🛠️ Tecnologías
-Node.js
-Telegram Bot API
-Librerías:
-node-telegram-bot-api
-@google/generative-ai (para análisis de imágenes)
-Manejo de sesiones y eventos en tiempo real
-🔐 Conexión
-
-El bot se conecta mediante:
-
-API ID
-API HASH
-Token de Telegram
-
-(Configurados mediante variables de entorno)
-
-🚀 Instalación
-# Clonar repositorio
-git clone https://github.com/michaelGuerraQ/bot-pagos-telegram.git
-
-# Entrar al proyecto
-cd bot-pagos-telegram
-
-# Instalar dependencias
-npm install
-⚙️ Configuración
-
-Crear archivo .env:
-
-TELEGRAM_TOKEN=tu_token
-API_ID=tu_api_id
-API_HASH=tu_api_hash
-▶️ Ejecución
-node index.js
-👨‍💻 Autor
-
-Michael Stuward Guerra Quispe
-🔗 https://github.com/michaelGuerraQ
-Crear archivo .env:
-
-TELEGRAM_TOKEN=tu_token
-API_ID=tu_api_id
-API_HASH=tu_api_hash
-▶️ Ejecución
-node index.js
-👨‍💻 Autor
-
-Michael Stuward Guerra Quispe
-🔗 https://github.com/michaelGuerraQ
