@@ -65,25 +65,26 @@ flowchart TD
     D --> E{Decisión}
     E -->|Aprobar| F[Acceso a canal privado]
     E -->|Rechazar| G[Notificación al cliente]
+
 🛠️ Tecnologías
-🟢 Node.js
-🤖 Telegram Bot API
-📦 node-telegram-bot-api
-🔐 dotenv
-🧠 IA para análisis de imágenes
+Node.js
+Telegram Bot API
+node-telegram-bot-api
+dotenv
+IA para análisis de imágenes
 🔐 Configuración
 
-Crea un archivo .env en la raíz:
-
+Crear archivo .env:
 TELEGRAM_TOKEN=tu_token
 ADMIN_BOT_TOKEN=tu_token_admin
 API_ID=tu_api_id
 API_HASH=tu_api_hash
 ADMIN_CHAT_ID=tu_id_admin
 CANAL_PRIVADO_ID=tu_canal
+
 🔑 Credenciales
-🔐 Token → @BotFather
-🧠 API ID y HASH → https://my.telegram.org
+Token → @BotFather
+API ID y HASH → https://my.telegram.org
 🚀 Instalación
 git clone https://github.com/michaelGuerraQ/bot-pagos-telegram.git
 cd bot-pagos-telegram
@@ -100,21 +101,24 @@ bot.sendSticker(chatId, 'https://i.imgur.com/sticker.webp');
 setTimeout(() => {
   bot.sendMessage(chatId, '⏳ Recordatorio: tu acceso está activo');
 }, 60000);
+👨‍💻 Autor
+
+Michael Stuward Guerra Quispe
+https://github.com/michaelGuerraQ
+
 
 ---
 
-## 🔥 ¿Por qué esto es mejor?
-
-Antes:
-❌ Todo en bloque  
-❌ Difícil de leer  
-❌ Se ve amateur  
-
-Ahora:
-✅ Diagrama visual (MERMAID 😎)  
-✅ Separado por secciones  
-✅ Más limpio  
-✅ Se ve profesional  
+## 🔥 ahora sí
+✔ Se ve ordenado  
+✔ GitHub lo renderiza bien  
+✔ Se ve profesional  
 
 ---
 
+Si quieres lo dejamos aún más 🔝 con:
+👉 GIF del flujo  
+👉 demo real  
+👉 README tipo startup  
+
+Solo dime bro 🚀
