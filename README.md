@@ -1,4 +1,10 @@
+
+```markdown
 # 🤖 Bot de Pagos Automatizado con Telegram
+
+<p align="center">
+  <img src="AQUI_PEGA_TU_BANNER.png" alt="Banner Bot de Pagos Telegram" width="100%">
+</p>
 
 <p align="center">
   Automatiza ventas digitales en Telegram validando pagos y gestionando accesos a contenido privado.
@@ -8,68 +14,40 @@
 
 ## 🚀 Descripción
 
-Sistema de automatización de ventas en Telegram que permite:
+Sistema de automatización de ventas en Telegram que permite gestionar todo el flujo de compra de contenido digital, desde la atención inicial del cliente hasta la aprobación del pago y la entrega del acceso a canales o grupos privados.
 
-- 🤖 Atender clientes automáticamente  
-- 📸 Recibir comprobantes de pago  
-- 🧠 Validar pagos manualmente o con IA  
-- 🔐 Otorgar acceso automático a canales privados  
+Este bot está pensado para:
 
-💡 Ideal para negocios digitales, contenido VIP o membresías.
+- Atención automática al cliente
+- Recepción de comprobantes de pago
+- Revisión manual o asistida de evidencias
+- Aprobación o rechazo desde un panel admin
+- Entrega automática de acceso a contenido VIP
+
+Ideal para negocios digitales, membresías, canales premium y venta de accesos privados.
 
 ---
 
 ## ✨ Funcionalidades
 
-- 🛒 Ventas automatizadas con flujo conversacional  
-- 💳 Recepción de pagos (Yape, Plin, transferencias)  
-- 📸 Validación de capturas  
-- 🔔 Panel admin con botones (Aprobar / Rechazar)  
-- 🔐 Acceso automático a canal privado  
-- 🤖 Arquitectura dual (Bot cliente + Bot admin)  
-- 📢 Mensajes automáticos y marketing  
+- 🛒 Ventas automatizadas con flujo conversacional
+- 💳 Recepción de pagos por Yape, Plin o transferencias
+- 📸 Recepción y validación de capturas de pago
+- 🔔 Panel de administración con opciones de aprobar o rechazar
+- 🔐 Acceso automático a canales o grupos privados
+- 🤖 Arquitectura dual: bot de ventas + bot administrador
+- 📢 Envío de mensajes automáticos y seguimiento postventa
 
 ---
 
-## 🧠 Flujo del Sistema
+## 🧠 Flujo del sistema
 
 ```mermaid
 graph TD
     A[Cliente] --> B[Bot de Ventas]
-    B --> C[Envía pago]
-    C --> D{Bot Admin}
-    D -->|Aprobar| E[Acceso VIP]
-    D -->|Rechazar| F[Error al cliente]
-
-🛠️ Tecnologías
-Node.js
-node-telegram-bot-api
-dotenv
-Telethon (opcional)
-
-🔐 Configuración
-Variables de entorno (.env)
-TELEGRAM_TOKEN=tu_token_bot_ventas
-ADMIN_BOT_TOKEN=tu_token_bot_admin
-API_ID=tu_api_id
-API_HASH=tu_api_hash
-ADMIN_CHAT_ID=tu_id_admin
-CANAL_PRIVADO_ID=tu_canal_id
-
-🚀 Instalación
-git clone https://github.com/michaelGuerraQ/bot-pagos-telegram.git
-cd bot-pagos-telegram
-npm install
-node index.js
-
-📌 Casos de uso
-🔥 Venta de contenido VIP
-📚 Cursos privados
-📈 Canales premium de Telegram
-💰 Automatización de negocios digitales
-👨‍💻 Autor
-
-Michael Stuward Guerra Quispe
-
-🎓 Estudiante de Ingeniería de Sistemas
-💻 Backend | Bots | Automatización
+    B --> C[Envía captura de pago]
+    C --> D[Bot Administrador]
+    D --> E{Validación}
+    E -->|Aprobado| F[Generar acceso VIP]
+    E -->|Rechazado| G[Notificar error al cliente]
+    F --> H[Seguimiento automático]
