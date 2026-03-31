@@ -1,37 +1,48 @@
-# 🤖 Bot de Pagos Automatizado con Telegram  
+<h1 align="center">🤖 Bot de Pagos Automatizado con Telegram</h1>
 
-![Telegram](https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram)
-![Node.js](https://img.shields.io/badge/Node.js-Backend-green?logo=node.js)
-![IA](https://img.shields.io/badge/IA-Análisis_de_Imágenes-orange)
-![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen)
+<p align="center">
+  <img src="https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram">
+  <img src="https://img.shields.io/badge/Bot_de_Pagos-Automatizado-0A66C2">
+</p>
+
+<p align="center">
+Bot avanzado desarrollado en <b>Node.js</b> para automatizar ventas, validar pagos mediante imágenes y gestionar el acceso a contenido privado en Telegram.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-Backend-green?logo=node.js">
+  <img src="https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram">
+  <img src="https://img.shields.io/badge/IA-Análisis_de_Imágenes-orange">
+  <img src="https://img.shields.io/badge/Estado-Activo-brightgreen">
+</p>
 
 ---
 
 ## 🚀 Descripción
 
-Bot avanzado desarrollado en **Node.js** que automatiza ventas, valida pagos mediante imágenes y gestiona el acceso a contenido privado en Telegram en tiempo real.
+Este bot permite automatizar un sistema completo de ventas digitales dentro de Telegram, incluyendo validación de pagos y control de acceso a contenido privado.
 
 ---
 
 ## ✨ Funcionalidades
 
-- 🛒 **Sistema de ventas automatizado**
+- 🛒 **Ventas automatizadas**
   - Flujo conversacional tipo asistente
-  - Atención automática a clientes
+  - Respuesta automática a clientes
 
-- 💳 **Validación de pagos por imagen**
-  - El cliente envía captura (Yape, transferencias, etc.)
-  - El bot procesa la evidencia
+- 💳 **Validación de pagos**
+  - Recepción de capturas (Yape, transferencias, etc.)
+  - Análisis automático de imágenes
 
-- 🔔 **Notificación al administrador**
-  - Se envía la imagen del pago automáticamente
-  - Incluye botones:
+- 🔔 **Sistema de aprobación**
+  - Envío de evidencia al administrador
+  - Botones interactivos:
     - ✅ Aprobar
     - ❌ Rechazar
 
 - 🔐 **Control de acceso**
-  - ✔ Si se aprueba → acceso a canal privado
-  - ❌ Si se rechaza → se notifica al cliente
+  - ✔ Acceso automático a canal privado
+  - ❌ Rechazo con notificación al cliente
 
 - 🤖 **Arquitectura de doble bot**
   - Bot cliente (ventas)
@@ -40,44 +51,38 @@ Bot avanzado desarrollado en **Node.js** que automatiza ventas, valida pagos med
 - 🎨 **Automatización de contenido**
   - Envío de imágenes
   - Envío de stickers
-  - Mensajes automáticos programados
+  - Mensajes programados
 
 ---
 
 ## 🧠 Flujo del sistema
 
-Cliente → Bot de Ventas → Envío de pago (imagen)  
-↓  
-Bot Administrador  
-↓  
-(Aprobar / Rechazar)  
-↓  
-Acceso o rechazo automático  
+```text
+Cliente → Bot de Ventas → Envío de pago (imagen)
+                      ↓
+              Bot Administrador
+                      ↓
+           (Aprobar / Rechazar)
+                      ↓
+        Acceso o rechazo automático
 
----
+🛠️ Tecnologías
+Node.js
+Telegram Bot API
+node-telegram-bot-api
+dotenv
+IA para análisis de imágenes
+🔐 Configuración
 
-## 🛠️ Tecnologías
+Crear archivo .env:
 
-- Node.js  
-- Telegram Bot API  
-- node-telegram-bot-api  
-- dotenv  
-- IA para análisis de imágenes  
-
----
-
-## 🔐 Configuración
-
-Crear archivo `.env` en la raíz del proyecto:
-
-```env
 TELEGRAM_TOKEN=tu_token
 ADMIN_BOT_TOKEN=tu_token_admin
 API_ID=tu_api_id
 API_HASH=tu_api_hash
 ADMIN_CHAT_ID=tu_id_admin
 CANAL_PRIVADO_ID=tu_canal
-🔑 Obtener credenciales
+🔑 Credenciales
 Token → @BotFather
 API ID y HASH → https://my.telegram.org
 🚀 Instalación
@@ -86,15 +91,13 @@ cd bot-pagos-telegram
 npm install
 ▶️ Ejecución
 node index.js
-🎨 Ejemplo: envío automático
-// Enviar imagen
+🎨 Ejemplo de envío automático
 bot.sendPhoto(chatId, 'https://i.imgur.com/imagen.jpg', {
   caption: '🎉 Gracias por tu compra!'
 });
 
-// Enviar sticker
 bot.sendSticker(chatId, 'https://i.imgur.com/sticker.webp');
-⏱️ Mensaje programado
+⏱️ Mensajes programados
 setTimeout(() => {
   bot.sendMessage(chatId, '⏳ Recordatorio: tu acceso está activo');
 }, 60000);
@@ -102,10 +105,3 @@ setTimeout(() => {
 
 Michael Stuward Guerra Quispe
 https://github.com/michaelGuerraQ
-
-💥 Valor del proyecto
-
-✔ Automatiza ventas reales
-✔ Integra validación de pagos
-✔ Usa lógica de negocio avanzada
-✔ Simula un sistema SaaS funcional
