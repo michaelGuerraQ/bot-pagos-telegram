@@ -60,12 +60,11 @@ Este bot permite automatizar un sistema completo de ventas digitales dentro de T
 ```mermaid
 flowchart TD
     A[Cliente] --> B[Bot de Ventas]
-    B --> C[Envía pago (imagen)]
+    B --> C[Envia pago]
     C --> D[Bot Administrador]
-    D --> E{Decisión}
+    D --> E{Decision}
     E -->|Aprobar| F[Acceso a canal privado]
-    E -->|Rechazar| G[Notificación al cliente]
-
+    E -->|Rechazar| G[Notificacion al cliente]
 🛠️ Tecnologías
 Node.js
 Telegram Bot API
@@ -75,13 +74,13 @@ IA para análisis de imágenes
 🔐 Configuración
 
 Crear archivo .env:
+
 TELEGRAM_TOKEN=tu_token
 ADMIN_BOT_TOKEN=tu_token_admin
 API_ID=tu_api_id
 API_HASH=tu_api_hash
 ADMIN_CHAT_ID=tu_id_admin
 CANAL_PRIVADO_ID=tu_canal
-
 🔑 Credenciales
 Token → @BotFather
 API ID y HASH → https://my.telegram.org
@@ -93,32 +92,15 @@ npm install
 node index.js
 🎨 Ejemplo de envío automático
 bot.sendPhoto(chatId, 'https://i.imgur.com/imagen.jpg', {
-  caption: '🎉 Gracias por tu compra!'
+  caption: 'Gracias por tu compra!'
 });
 
 bot.sendSticker(chatId, 'https://i.imgur.com/sticker.webp');
 ⏱️ Mensajes programados
 setTimeout(() => {
-  bot.sendMessage(chatId, '⏳ Recordatorio: tu acceso está activo');
+  bot.sendMessage(chatId, 'Recordatorio: tu acceso está activo');
 }, 60000);
 👨‍💻 Autor
 
 Michael Stuward Guerra Quispe
 https://github.com/michaelGuerraQ
-
-
----
-
-## 🔥 ahora sí
-✔ Se ve ordenado  
-✔ GitHub lo renderiza bien  
-✔ Se ve profesional  
-
----
-
-Si quieres lo dejamos aún más 🔝 con:
-👉 GIF del flujo  
-👉 demo real  
-👉 README tipo startup  
-
-Solo dime bro 🚀
